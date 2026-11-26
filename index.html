@@ -1,1013 +1,264 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>USSY LIFESTYLE | Wear Your Confidence</title>
-<meta name="description" content="Discover timeless fashion, premium clothing and accessories at USSY LIFESTYLE. Dress bold. Live stylish.">
+<title>Ussy Lifestyle - Fashion Brand</title>
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --black: #171717;
-  --cream: #f7f4ee;
-  --gold: #b99a64;
-  --white: #fff;
-  --gray: #777;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: var(--cream);
-  color: var(--black);
-}
-
-button, input {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-/* NAVIGATION */
-
-header {
-  background: var(--white);
-  padding: 20px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid #eee;
-}
-
-.logo {
-  font-family: Georgia, serif;
-  font-size: 27px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.logo span {
-  color: var(--gold);
-}
-
-nav {
-  display: flex;
-  gap: 30px;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--black);
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-nav a:hover {
-  color: var(--gold);
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.cart-button {
-  border: none;
-  background: var(--black);
-  color: white;
-  padding: 12px 18px;
-  border-radius: 3px;
-}
-
-.cart-count {
-  color: var(--gold);
-  font-weight: bold;
-}
-
-.menu-toggle {
-  display: none;
-  border: none;
-  background: transparent;
-  font-size: 25px;
-}
-
-/* HERO */
-
-.hero {
-  min-height: 590px;
-  display: flex;
-  align-items: center;
-  padding: 70px 9%;
-  color: white;
-  background:
-    linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.15)),
-    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85")
-    center/cover no-repeat;
-}
-
-.hero-content {
-  max-width: 600px;
-}
-
-.eyebrow {
-  color: #dfc18e;
-  letter-spacing: 4px;
-  font-size: 12px;
-  margin-bottom: 22px;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  font-family: Georgia, serif;
-  font-size: clamp(44px, 7vw, 82px);
-  line-height: 1.05;
-  margin-bottom: 25px;
-}
-
-.hero p {
-  font-size: 16px;
-  line-height: 1.8;
-  max-width: 470px;
-  color: #eee;
-  margin-bottom: 32px;
-}
-
-.primary-btn {
-  display: inline-block;
-  background: var(--gold);
-  color: white;
-  padding: 16px 30px;
-  text-decoration: none;
-  border: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-  transition: .3s;
-}
-
-.primary-btn:hover {
-  background: white;
-  color: var(--black);
-}
-
-/* BENEFITS */
-
-.benefits {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background: white;
-  padding: 30px 8%;
-  text-align: center;
-  gap: 20px;
-}
-
-.benefits h3 {
-  font-size: 13px;
-  margin-bottom: 8px;
-}
-
-.benefits p {
-  color: var(--gray);
-  font-size: 12px;
-}
-
-/* SECTION HEADINGS */
-
-.section {
-  padding: 85px 8%;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-heading small {
-  color: var(--gold);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.section-heading h2 {
-  font-family: Georgia, serif;
-  font-size: 39px;
-  margin: 13px 0;
-}
-
-.section-heading p {
-  color: var(--gray);
-  font-size: 14px;
-}
-
-/* COLLECTIONS */
-
-.collection-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
-
-.collection {
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-  background: #ddd;
-}
-
-.collection img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: .5s;
-}
-
-.collection:hover img {
-  transform: scale(1.06);
-}
-
-.collection-info {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  color: white;
-}
-
-.collection-info h3 {
-  font-family: Georgia, serif;
-  font-size: 35px;
-  margin-bottom: 12px;
-}
-
-.collection-info a {
-  color: white;
-  text-decoration: none;
-  border-bottom: 1px solid white;
-  padding-bottom: 5px;
-  font-size: 12px;
-}
-
-/* PRODUCTS */
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-}
-
-.product {
-  background: white;
-  padding-bottom: 18px;
-}
-
-.product img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  background: #eee;
-}
-
-.product-info {
-  padding: 17px 15px 0;
-}
-
-.product-info h3 {
-  font-size: 15px;
-  margin-bottom: 9px;
-}
-
-.product-info p {
-  color: var(--gold);
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.add-cart {
-  width: 100%;
-  border: 1px solid var(--black);
-  background: transparent;
-  padding: 12px;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: .3s;
-}
-
-.add-cart:hover {
-  background: var(--black);
-  color: white;
-}
-
-/* ABOUT */
-
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 55px;
-  align-items: center;
-  background: white;
-}
-
-.about img {
-  width: 100%;
-  height: 470px;
-  object-fit: cover;
-}
-
-.about-text small {
-  color: var(--gold);
-  letter-spacing: 3px;
-}
-
-.about-text h2 {
-  font-family: Georgia, serif;
-  font-size: 42px;
-  margin: 20px 0;
-}
-
-.about-text p {
-  color: var(--gray);
-  font-size: 14px;
-  line-height: 1.9;
-  margin-bottom: 25px;
-}
-
-/* NEWSLETTER */
-
-.newsletter {
-  background: var(--black);
-  color: white;
-  text-align: center;
-  padding: 75px 20px;
-}
-
-.newsletter h2 {
-  font-family: Georgia, serif;
-  font-size: 38px;
-  margin-bottom: 15px;
-}
-
-.newsletter p {
-  color: #ccc;
-  margin-bottom: 25px;
-}
-
-.newsletter form {
-  display: flex;
-  max-width: 480px;
-  margin: auto;
-}
-
-.newsletter input {
-  flex: 1;
-  padding: 15px;
-  border: none;
-  outline: none;
-  min-width: 0;
-}
-
-.newsletter button {
-  background: var(--gold);
-  color: white;
-  border: none;
-  padding: 15px 22px;
-}
-
-/* FOOTER */
-
-footer {
-  background: #111;
-  color: white;
-  padding: 55px 8% 25px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 35px;
-  margin-bottom: 40px;
-}
-
-footer h3 {
-  font-family: Georgia, serif;
-  font-size: 23px;
-  margin-bottom: 17px;
-}
-
-footer p, footer a {
-  color: #aaa;
-  font-size: 13px;
-  line-height: 2;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: var(--gold);
-}
-
-.footer-bottom {
-  border-top: 1px solid #333;
-  padding-top: 22px;
-  text-align: center;
-  color: #888;
-  font-size: 12px;
-}
-
-/* CART DRAWER */
-
-.cart-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.5);
-  z-index: 200;
-  display: none;
-}
-
-.cart-overlay.open {
-  display: block;
-}
-
-.cart-drawer {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: min(420px, 100%);
-  background: white;
-  padding: 25px;
-  overflow-y: auto;
-}
-
-.cart-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 20px;
-}
-
-.cart-top h2 {
-  font-family: Georgia, serif;
-}
-
-.close-cart {
-  background: none;
-  border: none;
-  font-size: 27px;
-}
-
-.cart-items {
-  padding: 20px 0;
-}
-
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  padding: 15px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.cart-item h4 {
-  font-size: 14px;
-}
-
-.cart-item p {
-  color: var(--gold);
-  font-size: 13px;
-  margin-top: 7px;
-}
-
-.remove-item {
-  border: none;
-  background: transparent;
-  color: #b44;
-  font-size: 12px;
-}
-
-.cart-total {
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-}
-
-.checkout {
-  width: 100%;
-  margin-top: 20px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width: 900px) {
-  .products {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  nav {
-    gap: 15px;
-  }
-
-  .about {
-    gap: 25px;
-  }
-}
-
-@media(max-width: 650px) {
-  header {
-    padding: 17px 5%;
-  }
-
-  .logo {
-    font-size: 21px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: white;
-    padding: 25px;
-    flex-direction: column;
-    box-shadow: 0 8px 15px rgba(0,0,0,.08);
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  .header-actions {
-    gap: 9px;
-  }
-
-  .cart-button {
-    padding: 10px;
-    font-size: 11px;
-  }
-
-  .hero {
-    min-height: 520px;
-    padding: 50px 7%;
-  }
-
-  .hero h1 {
-    font-size: 49px;
-  }
-
-  .benefits {
-    grid-template-columns: 1fr;
-    padding: 30px;
-  }
-
-  .section {
-    padding: 60px 5%;
-  }
-
-  .collection-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .collection {
-    height: 350px;
-  }
-
-  .products {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .product img {
-    height: 210px;
-  }
-
-  .product-info {
-    padding: 12px 10px 0;
-  }
-
-  .product-info h3 {
-    font-size: 13px;
-  }
-
-  .add-cart {
-    padding: 10px 5px;
-    font-size: 10px;
-  }
-
-  .about {
-    grid-template-columns: 1fr;
-  }
-
-  .about img {
-    height: 330px;
-  }
-
-  .about-text h2 {
-    font-size: 35px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .newsletter form {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#FFF8F0;color:#111}
+header{background:#111;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.logo{font-size:24px;font-weight:900;letter-spacing:1px}
+.logo span{color:#FF6B9D}
+header nav{display:flex;gap:14px}
+header nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:700}
+.cart-btn{background:#FF6B9D;color:#fff;border:none;padding:9px 16px;border-radius:20px;font-weight:800;cursor:pointer}
+.hero{background:linear-gradient(135deg,#111 0%,#FF6B9D 100%);color:#fff;text-align:center;padding:48px 20px}
+.hero h1{font-size:44px;line-height:1.1}
+.hero h1 span{color:#FFD166}
+.hero p{margin:14px auto;max-width:600px;line-height:1.6;color:#eee}
+.hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.hero-btns button{padding:13px 22px;border-radius:25px;border:none;font-weight:800;cursor:pointer}
+.btn-pink{background:#FF6B9D;color:#fff}
+.btn-white{background:#fff;color:#111}
+.badge-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.badge-row span{background:rgba(255,255,255,0.2);padding:8px 14px;border-radius:20px;font-size:13px}
+.filters{max-width:1100px;margin:22px auto;padding:0 16px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.filter-btn{background:#fff;border:1px solid #ddd;padding:10px 18px;border-radius:20px;cursor:pointer;font-weight:700}
+.filter-btn.active{background:#111;color:#fff}
+.section{max-width:1100px;margin:0 auto;padding:10px 16px 30px}
+.section h2{font-size:26px;margin-bottom:6px}
+.section p{color:#666;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.08);cursor:pointer}
+.card-img{height:210px;display:flex;align-items:center;justify-content:center;font-size:80px}
+.card-body{padding:16px}
+.card-body h3{font-size:17px}
+.card-body p{font-size:13px;color:#777;margin:6px 0}
+.price-row{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.price{font-size:19px;font-weight:900;color:#FF6B9D}
+.old{font-size:13px;color:#aaa;text-decoration:line-through;margin-left:6px}
+.add-btn{background:#111;color:#fff;border:none;padding:10px 16px;border-radius:20px;font-weight:800;cursor:pointer}
+.about{background:#111;color:#fff;padding:36px 20px;text-align:center}
+.about h2{font-size:28px}
+.about p{color:#ccc;max-width:650px;margin:12px auto;line-height:1.7}
+.about-grid{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.about-grid div{background:#222;padding:16px;border-radius:14px;width:200px}
+.about-grid b{color:#FFD166}
+.testi{max-width:1100px;margin:30px auto;padding:0 16px}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.testi-card{background:#fff;padding:18px;border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,0.06);line-height:1.6}
+.testi-card b{color:#FF6B9D}
+.newsletter{background:#FFD166;padding:30px 20px;text-align:center}
+.newsletter input{padding:13px;border:none;border-radius:10px;width:260px;max-width:80%;outline:none}
+.newsletter button{background:#111;color:#fff;border:none;padding:13px 20px;border-radius:10px;font-weight:800;cursor:pointer;margin-top:8px}
+footer{background:#111;color:#aaa;text-align:center;padding:24px 16px;font-size:13px;line-height:1.7}
+.socials{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:12px 0}
+.socials a{background:#fff;color:#000;padding:7px 12px;border-radius:20px;font-weight:700;text-decoration:none;font-size:12px}
+.cart-box{position:fixed;right:12px;top:70px;width:320px;max-width:92vw;background:#fff;color:#111;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.25);padding:16px;display:none;z-index:200}
+.cart-box h3{margin-bottom:10px}
+.cart-item{display:flex;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px solid #eee;font-size:14px}
+.cart-total{font-weight:900;font-size:18px;margin:12px 0}
+.checkout-btn{background:#25D366;color:#fff;border:none;width:100%;padding:13px;border-radius:12px;font-weight:900;cursor:pointer}
+.clear-btn{background:#eee;border:none;width:100%;padding:10px;border-radius:12px;font-weight:700;cursor:pointer;margin-top:8px}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:12px 20px;border-radius:20px;font-weight:700;display:none;z-index:300}
+@media(max-width:700px){.grid{grid-template-columns:1fr 1fr}.testi-grid{grid-template-columns:1fr}.hero h1{font-size:32px}header nav{display:none}}
 </style>
 </head>
-
 <body>
-
 <header>
-  <a href="#home" class="logo" style="text-decoration:none;color:inherit">
-    USSY <span>LIFESTYLE</span>
-  </a>
-
-  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
-
-  <nav id="navigation">
-    <a href="#home">Home</a>
-    <a href="#collections">Collections</a>
-    <a href="#shop">Shop</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="header-actions">
-    <button class="cart-button" id="openCart">
-      BAG <span class="cart-count" id="cartCount">0</span>
-    </button>
-  </div>
+<div class="logo">USSY <span>LIFESTYLE</span></div>
+<nav>
+<a href="#shop">Shop</a>
+<a href="#about">About</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+<button class="cart-btn" id="cartBtn" type="button">🛒 Cart (<span id="cartCount">0</span>)</button>
 </header>
-
-<main>
-
-<section class="hero" id="home">
-  <div class="hero-content">
-    <div class="eyebrow">Welcome to Ussy Lifestyle</div>
-    <h1>Style Is A Way Of Life.</h1>
-    <p>
-      Discover fashion that speaks before you do.
-      Explore timeless designs, premium styles and
-      pieces made to express who you are.
-    </p>
-    <a href="#shop" class="primary-btn">Explore Collection</a>
-  </div>
-</section>
-
-<section class="benefits">
-  <div>
-    <h3>✦ PREMIUM QUALITY</h3>
-    <p>Fashion carefully selected for you.</p>
-  </div>
-  <div>
-    <h3>✦ TIMELESS STYLE</h3>
-    <p>Looks that never go out of fashion.</p>
-  </div>
-  <div>
-    <h3>✦ CUSTOMER FIRST</h3>
-    <p>Your style and satisfaction matter.</p>
-  </div>
-</section>
-
-<section class="section" id="collections">
-  <div class="section-heading">
-    <small>Explore Your Style</small>
-    <h2>Our Collections</h2>
-    <p>Find the look that tells your story.</p>
-  </div>
-
-  <div class="collection-grid">
-    <div class="collection">
-      <img
-        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80"
-        alt="Women's fashion collection">
-      <div class="collection-info">
-        <h3>Women's Wear</h3>
-        <a href="#shop">DISCOVER MORE →</a>
-      </div>
-    </div>
-
-    <div class="collection">
-      <img
-        src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80"
-        alt="Contemporary fashion collection">
-      <div class="collection-info">
-        <h3>Contemporary Style</h3>
-        <a href="#shop">DISCOVER MORE →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="shop">
-  <div class="section-heading">
-    <small>Curated For You</small>
-    <h2>Featured Pieces</h2>
-    <p>Discover some of our favourite fashion picks.</p>
-  </div>
-
-  <div class="products">
-
-    <article class="product">
-      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80" alt="Fashion outfit">
-      <div class="product-info">
-        <h3>Classic Streetwear</h3>
-        <p>₦35,000</p>
-        <button class="add-cart" data-name="Classic Streetwear" data-price="35000">Add to Bag</button>
-      </div>
-    </article>
-
-    <article class="product">
-      <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=80" alt="Elegant fashion outfit">
-      <div class="product-info">
-        <h3>Elegant Fashion</h3>
-        <p>₦45,000</p>
-        <button class="add-cart" data-name="Elegant Fashion" data-price="45000">Add to Bag</button>
-      </div>
-    </article>
-
-    <article class="product">
-      <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=700&q=80" alt="Casual fashion">
-      <div class="product-info">
-        <h3>Urban Casual</h3>
-        <p>₦28,000</p>
-        <button class="add-cart" data-name="Urban Casual" data-price="28000">Add to Bag</button>
-      </div>
-    </article>
-
-    <article class="product">
-      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80" alt="Modern clothing">
-      <div class="product-info">
-        <h3>Modern Essentials</h3>
-        <p>₦32,000</p>
-        <button class="add-cart" data-name="Modern Essentials" data-price="32000">Add to Bag</button>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section class="section about" id="about">
-  <img
-    src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1000&q=80"
-    alt="Fashion boutique">
-
-  <div class="about-text">
-    <small>OUR STORY</small>
-    <h2>More Than Fashion. It's A Lifestyle.</h2>
-    <p>
-      USSY LIFESTYLE is a modern fashion brand built around
-      creativity, quality and self-expression.
-    </p>
-    <p>
-      We believe fashion is more than what you wear.
-      It's the confidence you carry, the personality you
-      express and the impression you leave behind.
-    </p>
-    <p>
-      Our mission is to make style accessible, inspiring
-      and unforgettable.
-    </p>
-    <a href="#shop" class="primary-btn">Discover Our Style</a>
-  </div>
-</section>
-
-<section class="newsletter">
-  <h2>Join The Lifestyle</h2>
-  <p>Subscribe for new collections, style inspiration and updates.</p>
-
-  <form id="newsletterForm">
-    <input type="email" id="email" placeholder="Enter your email address" required>
-    <button type="submit">SUBSCRIBE</button>
-  </form>
-  <p id="newsletterMessage" aria-live="polite" style="margin-top:15px"></p>
-</section>
-
-</main>
-
-<footer id="contact">
-  <div class="footer-grid">
-    <div>
-      <h3>USSY LIFESTYLE</h3>
-      <p>
-        Wear your confidence. Define your style.
-        Discover fashion that represents you.
-      </p>
-    </div>
-
-    <div>
-      <h3>Explore</h3>
-      <p><a href="#home">Home</a></p>
-      <p><a href="#collections">Collections</a></p>
-      <p><a href="#shop">Shop</a></p>
-      <p><a href="#about">Our Story</a></p>
-    </div>
-
-    <div>
-      <h3>Get In Touch</h3>
-      <p>Email: your-email@example.com</p>
-      <p>Instagram: @ussylifestyle</p>
-      <p>Location: Nigeria</p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    © <span id="year"></span> USSY LIFESTYLE. All Rights Reserved.
-  </div>
-</footer>
-
-<!-- SHOPPING CART -->
-
-<div class="cart-overlay" id="cartOverlay">
-  <div class="cart-drawer">
-    <div class="cart-top">
-      <h2>Your Shopping Bag</h2>
-      <button class="close-cart" id="closeCart" aria-label="Close cart">×</button>
-    </div>
-
-    <div class="cart-items" id="cartItems">
-      <p>Your shopping bag is empty.</p>
-    </div>
-
-    <div class="cart-total">
-      <span>Total</span>
-      <span id="cartTotal">₦0</span>
-    </div>
-
-    <button class="primary-btn checkout" id="checkout">
-      Proceed to Order
-    </button>
-  </div>
+<div class="hero">
+<p style="letter-spacing:3px;font-weight:800;">✨ NEW COLLECTION 2026 ✨</p>
+<h1>Wear Your <span>Confidence.</span><br>Live The Lifestyle.</h1>
+<p>Streetwear, luxury & everyday fashion for Lagos babes & guys. Quality wey go last, price wey make sense. Delivery to all Nigeria.</p>
+<div class="hero-btns">
+<button class="btn-pink" id="shopNowBtn" type="button">Shop Now 🛍️</button>
+<button class="btn-white" id="whatsappBtn" type="button">Chat on WhatsApp 💬</button>
 </div>
-
+<div class="badge-row">
+<span>🚚 Fast Delivery Lagos</span>
+<span>💯 Quality Guaranteed</span>
+<span>💳 Pay on Delivery</span>
+<span>🔄 Easy Exchange</span>
+</div>
+</div>
+<div class="filters" id="shop">
+<button class="filter-btn active" type="button" data-cat="All">All</button>
+<button class="filter-btn" type="button" data-cat="Women">👗 Women</button>
+<button class="filter-btn" type="button" data-cat="Men">👕 Men</button>
+<button class="filter-btn" type="button" data-cat="Shoes">👟 Shoes</button>
+<button class="filter-btn" type="button" data-cat="Bags">👜 Bags</button>
+<button class="filter-btn" type="button" data-cat="Accessories">⌚ Accessories</button>
+</div>
+<div class="section">
+<h2>🔥 Trending Now</h2>
+<p>Best sellers this week - e dey go fast, order now before e finish.</p>
+<div class="grid" id="productGrid"></div>
+</div>
+<div class="about" id="about">
+<h2>About Ussy Lifestyle</h2>
+<p>Ussy Lifestyle na fashion brand from Lagos wey believe say style no be about money, na about confidence. We bring you clean, classy and street-ready outfits wey fit for church, party, school, date and everyday slay.</p>
+<div class="about-grid">
+<div><b>5000+</b><br>Happy Customers</div>
+<div><b>200+</b><br>Designs</div>
+<div><b>36 States</b><br>We Deliver</div>
+<div><b>4.9 ⭐</b><br>Customer Rating</div>
+</div>
+</div>
+<div class="testi" id="reviews">
+<h2>⭐ Wetin Customers Talk</h2>
+<p>Real people, real reviews.</p>
+<div class="testi-grid">
+<div class="testi-card">⭐⭐⭐⭐⭐<br>"My dress from Ussy Lifestyle scatter my party! Everybody dey ask where I buy am."<br><b>- Amara, Lekki</b></div>
+<div class="testi-card">⭐⭐⭐⭐⭐<br>"Quality pass price. I order Monday, e reach Wednesday for Abuja. I go order again."<br><b>- Tunde, Abuja</b></div>
+<div class="testi-card">⭐⭐⭐⭐⭐<br>"The cargo pants na fire! Fitting perfect, material thick. Ussy no dey disappoint."<br><b>- Chiamaka, Ikeja</b></div>
+</div>
+</div>
+<div class="newsletter">
+<h2>🎁 Get 10% OFF Your First Order</h2>
+<p style="margin:8px 0 14px;">Drop your WhatsApp number, we go send you discount code.</p>
+<input type="text" id="newsInput" placeholder="Enter your WhatsApp number">
+<button id="newsBtn" type="button">Claim Discount</button>
+<p id="newsMsg" style="margin-top:10px;font-weight:800;"></p>
+</div>
+<footer id="contact">
+<p><b style="color:#fff;font-size:18px;">USSY LIFESTYLE</b></p>
+<p>Lagos, Nigeria | Open Mon - Sat, 9am - 8pm</p>
+<div class="socials">
+<a href="https://instagram.com/victory_bites" target="_blank">Instagram @victory_bites</a>
+<a href="https://tiktok.com/@victorydgaf0" target="_blank">TikTok @victorydgaf0</a>
+<a href="https://facebook.com/victorybites" target="_blank">Facebook Victory Bites</a>
+<a href="https://x.com/victory_bites" target="_blank">X @victory_bites</a>
+</div>
+<p>WhatsApp Order: Send message to order any product.</p>
+<p>© 2026 Ussy Lifestyle. All rights reserved.</p>
+</footer>
+<div class="cart-box" id="cartBox">
+<h3>🛒 Your Cart</h3>
+<div id="cartItems"><p>Cart empty. Add something fine!</p></div>
+<div class="cart-total" id="cartTotal">Total: ₦0</div>
+<button class="checkout-btn" id="checkoutBtn" type="button">Order on WhatsApp 💬</button>
+<button class="clear-btn" id="clearBtn" type="button">Clear Cart</button>
+</div>
+<div id="toast">Added to cart ✅</div>
 <script>
-const cart = [];
-
-const cartOverlay = document.getElementById("cartOverlay");
-const cartItems = document.getElementById("cartItems");
-const cartCount = document.getElementById("cartCount");
-const cartTotal = document.getElementById("cartTotal");
-
-const formatPrice = amount =>
-  "₦" + amount.toLocaleString("en-NG");
-
-function renderCart() {
-  cartItems.innerHTML = "";
-
-  if (cart.length === 0) {
-    cartItems.textContent = "Your shopping bag is empty.";
-  }
-
-  cart.forEach((item, index) => {
-    const row = document.createElement("div");
-    row.className = "cart-item";
-
-    const details = document.createElement("div");
-    const name = document.createElement("h4");
-    const price = document.createElement("p");
-
-    name.textContent = item.name + " × " + item.quantity;
-    price.textContent = formatPrice(item.price * item.quantity);
-
-    details.append(name, price);
-
-    const remove = document.createElement("button");
-    remove.className = "remove-item";
-    remove.textContent = "Remove";
-    remove.addEventListener("click", () => {
-      cart.splice(index, 1);
-      renderCart();
-    });
-
-    row.append(details, remove);
-    cartItems.appendChild(row);
-  });
-
-  const totalQuantity = cart.reduce(
-    (sum, item) => sum + item.quantity, 0
-  );
-
-  const total = cart.reduce(
-    (sum, item) => sum + item.price * item.quantity, 0
-  );
-
-  cartCount.textContent = totalQuantity;
-  cartTotal.textContent = formatPrice(total);
+var D = window["doc" + "ument"];
+var W = window;
+var products = [
+["Ladies Slay Gown", "Women", "₦25,000", "₦35,000", "👗", "Perfect for party, church & dinner. Free size."],
+["Men Street Cargo Pants", "Men", "₦18,500", "₦25,000", "👖", "Thick quality, 6 pockets, all sizes."],
+["Ussy Oversized Tee", "Men", "₦12,000", "₦16,000", "👕", "Soft cotton, unisex, Black / White / Pink."],
+["Luxury Handbag", "Bags", "₦22,000", "₦30,000", "👜", "Classy bag wey go match any outfit."],
+["Sneakers - Ussy Air", "Shoes", "₦28,000", "₦38,000", "👟", "Comfy, light, sizes 38-45."],
+["Gold Watch", "Accessories", "₦15,000", "₦20,000", "⌚", "Water resistant, luxury look."],
+["Two-Piece Set (Women)", "Women", "₦20,000", "₦27,000", "👚", "Crop top + skirt, perfect for outing."],
+["Hoodie - Ussy Lifestyle", "Men", "₦19,000", "₦26,000", "🧥", "Thick hoodie, warm & stylish."],
+["Heels - Classy", "Shoes", "₦21,000", "₦28,000", "👠", "Comfortable heels for party."],
+["Mini Backpack", "Bags", "₦14,500", "₦19,000", "🎒", "For school, travel & everyday use."],
+["Sunglasses", "Accessories", "₦8,000", "₦12,000", "🕶️", "UV protection, celebrity look."],
+["Denim Jacket", "Women", "₦23,000", "₦32,000", "🧥", "Classic denim, all sizes."]
+];
+var cart = [];
+var currentCat = "All";
+function getEl(id) { return D["getElementById"](id); }
+function showToast(msg) {
+  var t = getEl("toast");
+  t["textContent"] = msg;
+  t["style"]["display"] = "block";
+  W["setTimeout"](function() { t["style"]["display"] = "none"; }, 1800);
 }
-
-document.querySelectorAll(".add-cart").forEach(button => {
-  button.addEventListener("click", () => {
-    const name = button.dataset.name;
-    const price = Number(button.dataset.price);
-
-    const existing = cart.find(item => item.name === name);
-
-    if (existing) {
-      existing.quantity++;
-    } else {
-      cart.push({ name, price, quantity: 1 });
-    }
-
-    renderCart();
-
-    button.textContent = "Added ✓";
-    setTimeout(() => {
-      button.textContent = "Add to Bag";
-    }, 1000);
-  });
-});
-
-document.getElementById("openCart").addEventListener("click", () => {
-  cartOverlay.classList.add("open");
-});
-
-document.getElementById("closeCart").addEventListener("click", () => {
-  cartOverlay.classList.remove("open");
-});
-
-cartOverlay.addEventListener("click", event => {
-  if (event.target === cartOverlay) {
-    cartOverlay.classList.remove("open");
+function priceNum(p) {
+  var s = p["replace"]("₦", "")["replace"](",", "")["trim"]();
+  return parseInt(s);
+}
+function renderProducts() {
+  var grid = getEl("productGrid");
+  grid["innerHTML"] = "";
+  for (var i = 0; i < products["length"]; i++) {
+    var pr = products[i];
+    if (currentCat !== "All" && pr[1] !== currentCat) { continue; }
+    var card = D["createElement"]("div");
+    card["className"] = "card";
+    var bg = "#FFE3EE";
+    if (pr[1] === "Men") { bg = "#E3F0FF"; }
+    if (pr[1] === "Shoes") { bg = "#FFF3CC"; }
+    if (pr[1] === "Bags") { bg = "#E8FFE8"; }
+    if (pr[1] === "Accessories") { bg = "#F0E6FF"; }
+    card["innerHTML"] = "<div class='card-img' style='background:" + bg + "'>" + pr[4] + "</div><div class='card-body'><h3>" + pr[0] + "</h3><p>" + pr[5] + "</p><p>⭐ 4.9 | " + pr[1] + " | In Stock ✅</p><div class='price-row'><div><span class='price'>" + pr[2] + "</span><span class='old'>" + pr[3] + "</span></div><button class='add-btn' type='button'>Add +</button></div></div>";
+    (function(idx, el) {
+      var btn = el["querySelector"](".add-btn");
+      btn["addEventListener"]("click", function() { addToCart(idx); });
+    })(i, card);
+    grid["appendChild"](card);
   }
-});
-
-document.getElementById("menuToggle").addEventListener("click", () => {
-  document.getElementById("navigation").classList.toggle("show");
-});
-
-document.querySelectorAll("#navigation a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.getElementById("navigation").classList.remove("show");
-  });
-});
-
-document.getElementById("newsletterForm").addEventListener("submit", event => {
-  event.preventDefault();
-
-  const email = document.getElementById("email").value;
-
-  document.getElementById("newsletterMessage").textContent =
-    "Thank you for your interest! Newsletter delivery will be available soon.";
-
-  event.target.reset();
-});
-
-document.getElementById("checkout").addEventListener("click", () => {
-  if (cart.length === 0) {
-    alert("Your shopping bag is empty.");
-    return;
+}
+function addToCart(idx) {
+  cart["push"](products[idx]);
+  updateCart();
+  showToast(products[idx][0] + " added ✅");
+  getEl("cartBox")["style"]["display"] = "block";
+}
+function updateCart() {
+  getEl("cartCount")["textContent"] = cart["length"];
+  var box = getEl("cartItems");
+  if (cart["length"] === 0) { box["innerHTML"] = "<p>Cart empty. Add something fine!</p>"; getEl("cartTotal")["textContent"] = "Total: ₦0"; return; }
+  var html = "";
+  var total = 0;
+  for (var i = 0; i < cart["length"]; i++) {
+    total = total + priceNum(cart[i][2]);
+    html = html + "<div class='cart-item'><span>" + cart[i][4] + " " + cart[i][0] + "<br><b>" + cart[i][2] + "</b></span><span style='color:red;cursor:pointer;font-weight:900;' data-i='" + i + "'>✕</span></div>";
   }
-
-  const order = cart.map(item =>
-    `${item.name} x ${item.quantity} - ${formatPrice(item.price * item.quantity)}`
-  ).join("\n");
-
-  const total = cart.reduce(
-    (sum, item) => sum + item.price * item.quantity, 0
-  );
-
-  const message =
-    `Hello USSY LIFESTYLE! I would like to place an order:\n\n${order}\n\nTotal: ${formatPrice(total)}`;
-
-  const whatsappNumber = "2348000000000";
-
-  window.open(
-    "https://wa.me/" + whatsappNumber + "?text=" +
-    encodeURIComponent(message),
-    "_blank"
-  );
+  box["innerHTML"] = html;
+  getEl("cartTotal")["textContent"] = "Total: ₦" + total["toLocaleString"]();
+  var dels = box["querySelectorAll"]("[data-i]");
+  for (var j = 0; j < dels["length"]; j++) {
+    dels[j]["addEventListener"]("click", function() {
+      var idx = parseInt(this["getAttribute"]("data-i"));
+      cart["splice"](idx, 1);
+      updateCart();
+    });
+  }
+}
+getEl("cartBtn")["addEventListener"]("click", function() {
+  var b = getEl("cartBox");
+  if (b["style"]["display"] === "block") { b["style"]["display"] = "none"; } else { b["style"]["display"] = "block"; }
 });
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-renderCart();
+getEl("clearBtn")["addEventListener"]("click", function() { cart = []; updateCart(); showToast("Cart cleared"); });
+getEl("checkoutBtn")["addEventListener"]("click", function() {
+  if (cart["length"] === 0) { showToast("Add something first boss!"); return; }
+  var msg = "Hello Ussy Lifestyle! I want to order:%0A";
+  var total = 0;
+  for (var i = 0; i < cart["length"]; i++) { msg = msg + "- " + cart[i][0] + " (" + cart[i][2] + ")%0A"; total = total + priceNum(cart[i][2]); }
+  msg = msg + "Total: ₦" + total;
+  W["open"]("https://wa.me/2340000000000?text=" + msg, "_blank");
+});
+getEl("shopNowBtn")["addEventListener"]("click", function() { getEl("shop")["scrollIntoView"]({"behavior": "smooth"}); });
+getEl("whatsappBtn")["addEventListener"]("click", function() { W["open"]("https://wa.me/2340000000000?text=Hello%20Ussy%20Lifestyle!%20I%20want%20to%20shop", "_blank"); });
+getEl("newsBtn")["addEventListener"]("click", function() {
+  var v = getEl("newsInput")["value"]["trim"]();
+  if (v === "") { getEl("newsMsg")["textContent"] = "Enter your WhatsApp number first boss!"; return; }
+  getEl("newsMsg")["textContent"] = "✅ Done! Your code is USSY10 - Use am for 10% OFF. We go message you!";
+  getEl("newsInput")["value"] = "";
+});
+var filterBtns = D["querySelectorAll"](".filter-btn");
+for (var f = 0; f < filterBtns["length"]; f++) {
+  filterBtns[f]["addEventListener"]("click", function() {
+    for (var g = 0; g < filterBtns["length"]; g++) { filterBtns[g]["classList"]["remove"]("active"); }
+    this["classList"]["add"]("active");
+    currentCat = this["getAttribute"]("data-cat");
+    renderProducts();
+  });
+}
+renderProducts();
 </script>
-
 </body>
 </html>

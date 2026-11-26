@@ -1,0 +1,1013 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>USSY LIFESTYLE | Wear Your Confidence</title>
+<meta name="description" content="Discover timeless fashion, premium clothing and accessories at USSY LIFESTYLE. Dress bold. Live stylish.">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #171717;
+  --cream: #f7f4ee;
+  --gold: #b99a64;
+  --white: #fff;
+  --gray: #777;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--cream);
+  color: var(--black);
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* NAVIGATION */
+
+header {
+  background: var(--white);
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.cart-button {
+  border: none;
+  background: var(--black);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 3px;
+}
+
+.cart-count {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 25px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  padding: 70px 9%;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.15)),
+    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85")
+    center/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.eyebrow {
+  color: #dfc18e;
+  letter-spacing: 4px;
+  font-size: 12px;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(44px, 7vw, 82px);
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 470px;
+  color: #eee;
+  margin-bottom: 32px;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: white;
+  padding: 16px 30px;
+  text-decoration: none;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  transition: .3s;
+}
+
+.primary-btn:hover {
+  background: white;
+  color: var(--black);
+}
+
+/* BENEFITS */
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: white;
+  padding: 30px 8%;
+  text-align: center;
+  gap: 20px;
+}
+
+.benefits h3 {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.benefits p {
+  color: var(--gray);
+  font-size: 12px;
+}
+
+/* SECTION HEADINGS */
+
+.section {
+  padding: 85px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading small {
+  color: var(--gold);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  font-family: Georgia, serif;
+  font-size: 39px;
+  margin: 13px 0;
+}
+
+.section-heading p {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+/* COLLECTIONS */
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.collection {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.collection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.collection:hover img {
+  transform: scale(1.06);
+}
+
+.collection-info {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+}
+
+.collection-info h3 {
+  font-family: Georgia, serif;
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.collection-info a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+  font-size: 12px;
+}
+
+/* PRODUCTS */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.product {
+  background: white;
+  padding-bottom: 18px;
+}
+
+.product img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  background: #eee;
+}
+
+.product-info {
+  padding: 17px 15px 0;
+}
+
+.product-info h3 {
+  font-size: 15px;
+  margin-bottom: 9px;
+}
+
+.product-info p {
+  color: var(--gold);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.add-cart {
+  width: 100%;
+  border: 1px solid var(--black);
+  background: transparent;
+  padding: 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.add-cart:hover {
+  background: var(--black);
+  color: white;
+}
+
+/* ABOUT */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+  background: white;
+}
+
+.about img {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+}
+
+.about-text small {
+  color: var(--gold);
+  letter-spacing: 3px;
+}
+
+.about-text h2 {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  margin: 20px 0;
+}
+
+.about-text p {
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+  background: var(--black);
+  color: white;
+  text-align: center;
+  padding: 75px 20px;
+}
+
+.newsletter h2 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.newsletter p {
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.newsletter form {
+  display: flex;
+  max-width: 480px;
+  margin: auto;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  outline: none;
+  min-width: 0;
+}
+
+.newsletter button {
+  background: var(--gold);
+  color: white;
+  border: none;
+  padding: 15px 22px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #111;
+  color: white;
+  padding: 55px 8% 25px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 35px;
+  margin-bottom: 40px;
+}
+
+footer h3 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  margin-bottom: 17px;
+}
+
+footer p, footer a {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 2;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 22px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+}
+
+/* CART DRAWER */
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 200;
+  display: none;
+}
+
+.cart-overlay.open {
+  display: block;
+}
+
+.cart-drawer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: min(420px, 100%);
+  background: white;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+.cart-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.cart-top h2 {
+  font-family: Georgia, serif;
+}
+
+.close-cart {
+  background: none;
+  border: none;
+  font-size: 27px;
+}
+
+.cart-items {
+  padding: 20px 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item h4 {
+  font-size: 14px;
+}
+
+.cart-item p {
+  color: var(--gold);
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+.remove-item {
+  border: none;
+  background: transparent;
+  color: #b44;
+  font-size: 12px;
+}
+
+.cart-total {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.checkout {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  .about {
+    gap: 25px;
+  }
+}
+
+@media(max-width: 650px) {
+  header {
+    padding: 17px 5%;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 25px;
+    flex-direction: column;
+    box-shadow: 0 8px 15px rgba(0,0,0,.08);
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .header-actions {
+    gap: 9px;
+  }
+
+  .cart-button {
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: 520px;
+    padding: 50px 7%;
+  }
+
+  .hero h1 {
+    font-size: 49px;
+  }
+
+  .benefits {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .section {
+    padding: 60px 5%;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection {
+    height: 350px;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .product img {
+    height: 210px;
+  }
+
+  .product-info {
+    padding: 12px 10px 0;
+  }
+
+  .product-info h3 {
+    font-size: 13px;
+  }
+
+  .add-cart {
+    padding: 10px 5px;
+    font-size: 10px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about img {
+    height: 330px;
+  }
+
+  .about-text h2 {
+    font-size: 35px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="#home" class="logo" style="text-decoration:none;color:inherit">
+    USSY <span>LIFESTYLE</span>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+
+  <nav id="navigation">
+    <a href="#home">Home</a>
+    <a href="#collections">Collections</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="cart-button" id="openCart">
+      BAG <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">Welcome to Ussy Lifestyle</div>
+    <h1>Style Is A Way Of Life.</h1>
+    <p>
+      Discover fashion that speaks before you do.
+      Explore timeless designs, premium styles and
+      pieces made to express who you are.
+    </p>
+    <a href="#shop" class="primary-btn">Explore Collection</a>
+  </div>
+</section>
+
+<section class="benefits">
+  <div>
+    <h3>✦ PREMIUM QUALITY</h3>
+    <p>Fashion carefully selected for you.</p>
+  </div>
+  <div>
+    <h3>✦ TIMELESS STYLE</h3>
+    <p>Looks that never go out of fashion.</p>
+  </div>
+  <div>
+    <h3>✦ CUSTOMER FIRST</h3>
+    <p>Your style and satisfaction matter.</p>
+  </div>
+</section>
+
+<section class="section" id="collections">
+  <div class="section-heading">
+    <small>Explore Your Style</small>
+    <h2>Our Collections</h2>
+    <p>Find the look that tells your story.</p>
+  </div>
+
+  <div class="collection-grid">
+    <div class="collection">
+      <img
+        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80"
+        alt="Women's fashion collection">
+      <div class="collection-info">
+        <h3>Women's Wear</h3>
+        <a href="#shop">DISCOVER MORE →</a>
+      </div>
+    </div>
+
+    <div class="collection">
+      <img
+        src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80"
+        alt="Contemporary fashion collection">
+      <div class="collection-info">
+        <h3>Contemporary Style</h3>
+        <a href="#shop">DISCOVER MORE →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="section-heading">
+    <small>Curated For You</small>
+    <h2>Featured Pieces</h2>
+    <p>Discover some of our favourite fashion picks.</p>
+  </div>
+
+  <div class="products">
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80" alt="Fashion outfit">
+      <div class="product-info">
+        <h3>Classic Streetwear</h3>
+        <p>₦35,000</p>
+        <button class="add-cart" data-name="Classic Streetwear" data-price="35000">Add to Bag</button>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=80" alt="Elegant fashion outfit">
+      <div class="product-info">
+        <h3>Elegant Fashion</h3>
+        <p>₦45,000</p>
+        <button class="add-cart" data-name="Elegant Fashion" data-price="45000">Add to Bag</button>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=700&q=80" alt="Casual fashion">
+      <div class="product-info">
+        <h3>Urban Casual</h3>
+        <p>₦28,000</p>
+        <button class="add-cart" data-name="Urban Casual" data-price="28000">Add to Bag</button>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80" alt="Modern clothing">
+      <div class="product-info">
+        <h3>Modern Essentials</h3>
+        <p>₦32,000</p>
+        <button class="add-cart" data-name="Modern Essentials" data-price="32000">Add to Bag</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <img
+    src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1000&q=80"
+    alt="Fashion boutique">
+
+  <div class="about-text">
+    <small>OUR STORY</small>
+    <h2>More Than Fashion. It's A Lifestyle.</h2>
+    <p>
+      USSY LIFESTYLE is a modern fashion brand built around
+      creativity, quality and self-expression.
+    </p>
+    <p>
+      We believe fashion is more than what you wear.
+      It's the confidence you carry, the personality you
+      express and the impression you leave behind.
+    </p>
+    <p>
+      Our mission is to make style accessible, inspiring
+      and unforgettable.
+    </p>
+    <a href="#shop" class="primary-btn">Discover Our Style</a>
+  </div>
+</section>
+
+<section class="newsletter">
+  <h2>Join The Lifestyle</h2>
+  <p>Subscribe for new collections, style inspiration and updates.</p>
+
+  <form id="newsletterForm">
+    <input type="email" id="email" placeholder="Enter your email address" required>
+    <button type="submit">SUBSCRIBE</button>
+  </form>
+  <p id="newsletterMessage" aria-live="polite" style="margin-top:15px"></p>
+</section>
+
+</main>
+
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <h3>USSY LIFESTYLE</h3>
+      <p>
+        Wear your confidence. Define your style.
+        Discover fashion that represents you.
+      </p>
+    </div>
+
+    <div>
+      <h3>Explore</h3>
+      <p><a href="#home">Home</a></p>
+      <p><a href="#collections">Collections</a></p>
+      <p><a href="#shop">Shop</a></p>
+      <p><a href="#about">Our Story</a></p>
+    </div>
+
+    <div>
+      <h3>Get In Touch</h3>
+      <p>Email: your-email@example.com</p>
+      <p>Instagram: @ussylifestyle</p>
+      <p>Location: Nigeria</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> USSY LIFESTYLE. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- SHOPPING CART -->
+
+<div class="cart-overlay" id="cartOverlay">
+  <div class="cart-drawer">
+    <div class="cart-top">
+      <h2>Your Shopping Bag</h2>
+      <button class="close-cart" id="closeCart" aria-label="Close cart">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p>Your shopping bag is empty.</p>
+    </div>
+
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">₦0</span>
+    </div>
+
+    <button class="primary-btn checkout" id="checkout">
+      Proceed to Order
+    </button>
+  </div>
+</div>
+
+<script>
+const cart = [];
+
+const cartOverlay = document.getElementById("cartOverlay");
+const cartItems = document.getElementById("cartItems");
+const cartCount = document.getElementById("cartCount");
+const cartTotal = document.getElementById("cartTotal");
+
+const formatPrice = amount =>
+  "₦" + amount.toLocaleString("en-NG");
+
+function renderCart() {
+  cartItems.innerHTML = "";
+
+  if (cart.length === 0) {
+    cartItems.textContent = "Your shopping bag is empty.";
+  }
+
+  cart.forEach((item, index) => {
+    const row = document.createElement("div");
+    row.className = "cart-item";
+
+    const details = document.createElement("div");
+    const name = document.createElement("h4");
+    const price = document.createElement("p");
+
+    name.textContent = item.name + " × " + item.quantity;
+    price.textContent = formatPrice(item.price * item.quantity);
+
+    details.append(name, price);
+
+    const remove = document.createElement("button");
+    remove.className = "remove-item";
+    remove.textContent = "Remove";
+    remove.addEventListener("click", () => {
+      cart.splice(index, 1);
+      renderCart();
+    });
+
+    row.append(details, remove);
+    cartItems.appendChild(row);
+  });
+
+  const totalQuantity = cart.reduce(
+    (sum, item) => sum + item.quantity, 0
+  );
+
+  const total = cart.reduce(
+    (sum, item) => sum + item.price * item.quantity, 0
+  );
+
+  cartCount.textContent = totalQuantity;
+  cartTotal.textContent = formatPrice(total);
+}
+
+document.querySelectorAll(".add-cart").forEach(button => {
+  button.addEventListener("click", () => {
+    const name = button.dataset.name;
+    const price = Number(button.dataset.price);
+
+    const existing = cart.find(item => item.name === name);
+
+    if (existing) {
+      existing.quantity++;
+    } else {
+      cart.push({ name, price, quantity: 1 });
+    }
+
+    renderCart();
+
+    button.textContent = "Added ✓";
+    setTimeout(() => {
+      button.textContent = "Add to Bag";
+    }, 1000);
+  });
+});
+
+document.getElementById("openCart").addEventListener("click", () => {
+  cartOverlay.classList.add("open");
+});
+
+document.getElementById("closeCart").addEventListener("click", () => {
+  cartOverlay.classList.remove("open");
+});
+
+cartOverlay.addEventListener("click", event => {
+  if (event.target === cartOverlay) {
+    cartOverlay.classList.remove("open");
+  }
+});
+
+document.getElementById("menuToggle").addEventListener("click", () => {
+  document.getElementById("navigation").classList.toggle("show");
+});
+
+document.querySelectorAll("#navigation a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navigation").classList.remove("show");
+  });
+});
+
+document.getElementById("newsletterForm").addEventListener("submit", event => {
+  event.preventDefault();
+
+  const email = document.getElementById("email").value;
+
+  document.getElementById("newsletterMessage").textContent =
+    "Thank you for your interest! Newsletter delivery will be available soon.";
+
+  event.target.reset();
+});
+
+document.getElementById("checkout").addEventListener("click", () => {
+  if (cart.length === 0) {
+    alert("Your shopping bag is empty.");
+    return;
+  }
+
+  const order = cart.map(item =>
+    `${item.name} x ${item.quantity} - ${formatPrice(item.price * item.quantity)}`
+  ).join("\n");
+
+  const total = cart.reduce(
+    (sum, item) => sum + item.price * item.quantity, 0
+  );
+
+  const message =
+    `Hello USSY LIFESTYLE! I would like to place an order:\n\n${order}\n\nTotal: ${formatPrice(total)}`;
+
+  const whatsappNumber = "2348000000000";
+
+  window.open(
+    "https://wa.me/" + whatsappNumber + "?text=" +
+    encodeURIComponent(message),
+    "_blank"
+  );
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+renderCart();
+</script>
+
+</body>
+</html>
